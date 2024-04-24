@@ -16,7 +16,7 @@ const Front = () => {
                 <p>
                 Expertise in JavaScript stack, including React.js for front-end development and Express.js for back-end, enabling seamless communication between client and server.                </p>
                   {/* <p>Ability to create responsive web applications that adapt seamlessly to various devices and screen sizes, enhancing user experience across desktop, tablet, and mobile platforms.                </p> */}
-                <Link to="https://drive.google.com/file/d/1Ws3FMWmx9zLgGqR1C3U3wFYwjiK4Za-3/view?usp=sharing" className='btn1'>Download Resume
+                <Link to="https://drive.google.com/file/d/1M0bumhNO51ceeEyenBALlrEbVBiQrSzs/view?usp=sharing" className='btn1'>Download Resume
                 <FaLink/>
                 </Link>
               </div> 
