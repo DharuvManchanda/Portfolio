@@ -68,7 +68,7 @@ or
          </p>
         </div>
         <div className="icons">
-          <Link to="https://www.npmjs.com/package/react-router-dom">
+          <Link to="https://github.com/DharuvManchanda">
 <BsGithub className="fa-brands"/>
           </Link>
           <Link to="https://www.instagram.com/dharuv_manchanda003/">
