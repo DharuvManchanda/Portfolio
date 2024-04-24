@@ -1,32 +1,32 @@
-export const CardData = [
+export const CardData = [{
+  heading: "Technologies used MERN",
+  id: 1,
+  img: require("./Images/Screenshot (311).png"),
+  pName: "Study Notion",
+  pLink: "https://study-notion-frontend-phi-mocha.vercel.app/",
+
+},
   {
     heading: "Technologies Used Html Css JavaScript",
-    id: 1,
+    id: 2,
     img: require("./Images/tic tac toe.png"),
     pName: "Tic Tac Toe Game",
     pLink: "https://tic-tac-toe-gamexo.netlify.app",
   },
    {
-    id: 2,
+    id: 3,
     heading: "Technologies Used ReactJS Canva",
     img: require("./Images/ielts.png"),
     pName: "Institute Website",
     pLink: "https://dpd-ielts.vercel.app/",
   },
 {
-    id: 3,
+    id: 4,
     heading: "Technologies Used Bootstrap JavaScript",
     img: require("./Images/textform.png"),
     pName: "Text Analysis App",
     pLink: "https://dm-textform.netlify.app",
   },
-  {
-    id: 4,
-    heading: "Technologies Used Bootstrap JavaScript",
-    img: require("./Images/figma.png"),
-    pName: "Figma Design",
-    pLink: "https://bio-jouvance.netlify.app",
-  }, 
 ];
 export const Data = [
   {

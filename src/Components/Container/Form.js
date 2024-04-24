@@ -1,5 +1,9 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import { IoIosSend } from "react-icons/io";
+
 export default function Form() {
   // function changeHandle(event){
   //     setForm(prevData=>{
@@ -32,52 +36,83 @@ export default function Form() {
 </select>
 <br /> */
   }
+  const [setForm,setFormData]=useState({from_name:"",from_email:"",subject:"",message:""});
+  const [message,setMessage]=useState(false);
+  // const [formm, setForm] = useState({
+  //   name: "",
+  //   email: "",
+  //   subject: "",
+  //   textarea: "",
+  //   isVis: true,
+  //   mode: "",
+  //   favCar: "",
+  // });
+  function changeHandle(event){
+    setFormData(prevData=>{
+        return {
+            ...prevData,
+            [event.target.name]:event.target.value
+        }
+    })
+}
+  // function changeHandle(event) {
+  //   console.log(formm);
+  //   const { name, value, checked, type } = event.target;
+  //   setForm((prevData) => {
+  //     return {
+  //       ...prevData,
+  //       [name]: type === "checkbox" ? checked : value,
+  //     };
+  //   });
+  // }
+  // function handleSubmit(event) {
+  //   event.preventDefault();
+  //   console.log("after submitting");
+  //   console.log(form);
+  //   setForm({ name: "", email: "", subject: "", textarea: "" });
+  //   toast.success("Form Submitted");
+  // }
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm('service_13kdy6m', 'template_pw8r8vq', form.current, {
+        publicKey: 'KjQ-oC8LFvSz_wg_p',
+      })
+      .then(
+        () => {
+          setFormData({from_name:"",from_email:"",subject:"",message:""});
+          toast.success("Form Submitted");
+          setMessage(true);
+      setTimeout(() => {
+        setMessage(false);
+      }, 5000);
+        },
+        (error) => {
+toast.error("Error in submission");
 
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    textarea: "",
-    isVis: true,
-    mode: "",
-    favCar: "",
-  });
-  function changeHandle(event) {
-    console.log(form);
-    const { name, value, checked, type } = event.target;
-    setForm((prevData) => {
-      return {
-        ...prevData,
-        [name]: type === "checkbox" ? checked : value,
-      };
-    });
-  }
-  function handleSubmit(event) {
-    event.preventDefault();
-    console.log("after submitting");
-    console.log(form);
-    setForm({ name: "", email: "", subject: "", textarea: "" });
-    toast.success("Form Submitted");
-  }
+        },
+      );
+  };
   return (
-    <form onSubmit={handleSubmit}>
+    <form ref={form} onSubmit={sendEmail}>
       <div className="inputName">
         <input
           type="text"
           placeholder="Your name"
-          name="name"
+          name="from_name"
           id="nameArea"
           onChange={changeHandle}
-          value={form.name}
+          value={setForm.from_name}
           required
         />
         <input
           type="text"
           placeholder="Your email"
-          name="email"
+          name="from_email"
           id="emailArea"
           onChange={changeHandle}
-          value={form.email}
+          value={setForm.from_email}
           required
         />
       </div>
@@ -88,22 +123,22 @@ export default function Form() {
           id="subject"
           placeholder="Your subject"
           onChange={changeHandle}
-          value={form.subject}
+          value={setForm.subject}
           required
         />
       </div>
       <div className="inputName">
         <textarea
-          name="textarea"
+          name="message"
           id="textArea"
           rows={6}
           placeholder="Write your message"
           onChange={changeHandle}
-          value={form.textarea}
+          value={setForm.message}
           required
         ></textarea>
       </div>
-      <button className="subBtn cardBtn">Send Message</button>
+      <button className="subBtn cardBtn">{message ? "Messsage Sent!":"Send Message"}</button>
     </form>
   );
 }

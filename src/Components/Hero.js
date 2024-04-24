@@ -5,6 +5,7 @@ import { FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { Link } from "react-router-dom";
+
 export const ColorObjectData={
   color:"#39D1B4",
 }

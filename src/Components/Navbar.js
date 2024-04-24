@@ -10,25 +10,23 @@ import { HashLink as Link } from "react-router-hash-link";
 import { NavLink } from "react-router-dom";
 import { Route } from 'lucide-react';
 import { ClipboardCheck } from 'lucide-react';
+import { FaArrowUp } from "react-icons/fa";
 
 export default function Navbar() {
   const[open,setOpen]=useState(false);
   return (
     <nav className={open ? "nav open": "nav close"}>
          {
-        open ? <FaXmark className={open ? "fa-round active": ""} onClick={()=>{setOpen(!open)}}/>
+        open ? <FaXmark className={open ? "fa-round": ""} onClick={()=>{setOpen(!open)}}/>
         : <RiMenu2Fill className={"fa-round"} onClick={()=>{setOpen(!open)}}/>
       }  
-      <Link to="#top" >
-<TiHome className="fa-solid"/>     
- </Link>
       <Link to="#about" smooth>
 <FaRegUser className="fa-solid"/>
       </Link>
       <Link to="#education" smooth>
 <Route className="fa-solid"/>
       </Link>
-       <Link to="#skills" smooth>
+       <Link to="#skill" smooth>
 <IoBagCheckOutline className="fa-solid"/>
       </Link>
          <Link to="#project" smooth>

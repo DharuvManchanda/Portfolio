@@ -6,6 +6,8 @@ import { Route, Routes } from "react-router-dom";
 import Skills from "./Components/Container/Skills";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { HashLink as Link } from "react-router-hash-link";
+import { FaArrowUp } from "react-icons/fa";
 
 function App() {
   return (
@@ -18,6 +20,9 @@ function App() {
       <Route path="/" element={Container} />
         <Route path="/contact/*" element={Skills} />
          </Routes>
+         <Link to="#top" smooth>
+<FaArrowUp className="topArrow fa-solid"/>     
+ </Link>
            </div>
            <ToastContainer/>
 </>

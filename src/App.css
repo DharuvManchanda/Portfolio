@@ -73,6 +73,24 @@ a {
   overflow-y: scroll;
 }
 /* Navbar */
+.topArrow{
+  display: none;
+  z-index: 2000;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+
+padding: 10px;
+font-size: 20px;
+
+background-color: #c52394;
+border-radius: 50%;
+padding: 10px;
+width: 40px;
+text-align: center;
+height: 40px;
+z-index: 1000;
+}
 nav {
   z-index: 100;
   display: flex;
@@ -112,9 +130,9 @@ nav img {
   background-color: #c52394;
   border-radius: 50%;
   padding: 10px;
-  width: 50px;
+  width: 40px;
   text-align: center;
-  height: 50px;
+  height: 40px;
   z-index: 1000;
 }
 
@@ -498,6 +516,9 @@ textarea::placeholder {
   }
 }
 @media (max-width: 900px) {
+  .topArrow{
+    display: block;
+  }
   .wrapper {
     flex-wrap: wrap-reverse;
     overflow-y: scroll;
