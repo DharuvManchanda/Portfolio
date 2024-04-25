@@ -7,9 +7,8 @@ import { useState } from "react";
 import { IoBagCheckOutline } from "react-icons/io5";
 import { IoBagCheckSharp } from "react-icons/io5";
 import { HashLink as Link } from "react-router-hash-link";
-import { NavLink } from "react-router-dom";
 import { Route } from 'lucide-react';
-import { ClipboardCheck } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import { FaArrowUp } from "react-icons/fa";
 
 export default function Navbar() {
@@ -31,6 +30,9 @@ export default function Navbar() {
       </Link>
          <Link to="#project" smooth>
 <FaCode className="fa-solid"/>    
+  </Link>
+  <Link to="#contact" smooth>
+  <Mail className="fa-solid"/>
   </Link>
 
     </nav>

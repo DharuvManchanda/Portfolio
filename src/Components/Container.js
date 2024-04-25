@@ -13,7 +13,7 @@ const Container = () => {
  <Front />
       <h3 id="education">Education Journey</h3>
       <VerticalTabs />
-      <h3 id="skills">Skills </h3>
+      <h3 id="skill">Skills </h3>
       <div className="Wrap">
         {Data.map((skill) => {
           return <Skills key={skill.id} {...skill} />;
@@ -25,7 +25,7 @@ const Container = () => {
           return <Projects key={skill.id} {...skill} />;
         })}
       </div>
-      <h3>Get In Touch</h3>
+      <h3 id="contact">Get In Touch</h3>
       <Form />
     </div>
   );
