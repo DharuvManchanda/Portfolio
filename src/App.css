@@ -10,6 +10,11 @@
 _selected {
   background-color: #c52394;
 }
+h1 {
+  color: #ffffffd0;
+  font-family: "Indie Flower", cursive;
+  font-size: 100px;
+}
 :root {
   --body-color: #191919;
   --white--color: #ffffffd0;
@@ -54,6 +59,8 @@ body {
   /* color: #e6e5e5;
 color: #ddd7d0; */
 }
+@keyframes l3 {to{transform: rotate(1turn)}}
+
 html {
   scroll-behavior: smooth;
 }
@@ -191,11 +198,6 @@ nav img {
 .linkColor {
   color: var(--white--color);
   font-weight: 600;
-}
-h1 {
-  color: var(--white--color);
-  font-family: "Indie Flower", cursive;
-  font-size: 100px;
 }
 .text h2 {
   font-size: 30px;

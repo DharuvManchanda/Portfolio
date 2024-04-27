@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import image from '../MyImages/whiteOutlineee.png'
 import { FaLink } from "react-icons/fa";
 import { Link } from 'react-router-dom'
