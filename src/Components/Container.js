@@ -27,6 +27,7 @@ const Container = () => {
       </div>
       <h3 id="contact">Get In Touch</h3>
       <Form />
+      <Footer/>
     </div>
   );
 };

@@ -1,13 +1,9 @@
 import React from 'react'
 import { FaLink } from "react-icons/fa";
-import { IoMdHeartEmpty,IoMdHeart } from "react-icons/io";
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux'
-import { decrement, increment } from '../Redux/Slices/LikeCount';
 
 const Projects = ({pName,pLink,img,heading}) => {
-const count=useSelector((state)=> state.counter.value);
-const dispatch=useDispatch();
   return (
     <> 
        <div className='card'>
@@ -22,7 +18,7 @@ const dispatch=useDispatch();
 <h4>{count} Likes</h4>
 </div> */}
 <div className="color cardBtn">
-<Link to={pLink}>Link
+<Link to={pLink}>Live Link
 <FaLink className='cardIcon'/>
 </Link>
 </div>
