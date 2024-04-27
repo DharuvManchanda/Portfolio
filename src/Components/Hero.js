@@ -71,15 +71,16 @@ or
           <Link to="https://github.com/DharuvManchanda">
 <BsGithub className="fa-brands"/>
           </Link>
-          <Link to="https://www.instagram.com/dharuv_manchanda003/">
-          <FaInstagram className="fa-brands"/>
-
-          </Link>
+        
           <Link to="https://www.linkedin.com/in/dharuv-manchanda-270326233/">
           <FaLinkedin className="fa-brands"/>
           </Link>
           <Link to="https://twitter.com/manchanda00">
           <FaTwitter className="fa-brands"/>
+          </Link>
+          <Link to="https://www.instagram.com/dharuv_manchanda003/">
+          <FaInstagram className="fa-brands"/>
+
           </Link>
         </div>
       </div>

@@ -76,6 +76,9 @@ const VerticalTabs = () => {
                 enhancing the functionality of the website. This includes
                 working with APIs for social media, maps, and other services.
               </li>
+              <li>
+              Extensive experience in JavaScript programming language, adapt at utilizing its features to create dynamic and interactive web applications.
+              </li>
             </div>
           </TabPanel>
           <TabPanel className="TabText">
