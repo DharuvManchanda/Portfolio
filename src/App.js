@@ -16,11 +16,7 @@ function App() {
       <Navbar />
       <Container />
       <Hero />
-       <Routes>
-      <Route path="/" element={Container} />
-        <Route path="/contact/*" element={Skills} />
-         </Routes>
-         <Link to="#top" smooth>
+    <Link to="#top" smooth>
 <FaArrowUp className="topArrow fa-solid"/>     
  </Link>
            </div>

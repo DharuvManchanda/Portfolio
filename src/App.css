@@ -12,9 +12,9 @@ _selected {
 }
 :root {
   --body-color: #191919;
-  --white--color: #ffffff;
-  --light--White: #c1c0c0f0;
-  --lightest--white-color: #c1c0c0c4;
+  --white--color: #ffffffd0;
+  --light--White: #c1c0c0c7;
+  --lightest--white-color: #c1c0c0a2;
   --tansparent--bg: rgba(255, 255, 255, 0.05);
   --light--tansparent--bg: #ffffff0c;
   --front--bg: linear-gradient(
@@ -39,9 +39,10 @@ _selected {
   --body-color: #191919;
 }
 [data-theme="cream"] {
+  --white--color: #fffffffb;
   --body-color: #baafa1;
   --light--White: #f0f0f0;
-  --lightest--white-color: #f0f0f0;
+  --lightest--white-color: #f0f0f090;
   --tansparent--bg: rgba(255, 255, 255, 0.07);
 }
 body {
@@ -397,7 +398,7 @@ h1 {
   position: relative;
   max-width: 100%;
   max-height: 300px;
-  color: #ffffff;
+  color: var(--white--color);
 }
 .images {
   width: 100%;
@@ -491,7 +492,7 @@ h1 {
 }
 .cardBtn a,
 .fa-link {
-  color: #ffffff;
+  color: var(--white--color);
   font-size: 18px;
 }
 /* form section */
@@ -555,7 +556,7 @@ textarea::placeholder {
 .subBtn {
   padding-block: 15px;
   border-radius: 30px;
-  color: #ffffff;
+  color: var(--white--color);
   cursor: pointer;
   font-size: 12px;
 }
@@ -655,6 +656,7 @@ textarea::placeholder {
     display: block;
   }
   .wrapper {
+    max-height: 100%;
     -ms-flex-wrap: wrap-reverse;
         flex-wrap: wrap-reverse;
     overflow-y: scroll;
