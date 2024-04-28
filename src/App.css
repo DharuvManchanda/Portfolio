@@ -10,11 +10,6 @@
 _selected {
   background-color: #c52394;
 }
-h1 {
-  color: #ffffffd0;
-  font-family: "Indie Flower", cursive;
-  font-size: 100px;
-}
 :root {
   --body-color: #191919;
   --white--color: #ffffffd0;
@@ -58,6 +53,11 @@ body {
   sans-serif;
   /* color: #e6e5e5;
 color: #ddd7d0; */
+}
+h1 {
+  color: #ffffffd0;
+  font-family: "Indie Flower", cursive;
+  font-size: 100px;
 }
 @keyframes l3 {to{transform: rotate(1turn)}}
 
