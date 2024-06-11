@@ -103,6 +103,7 @@ const form = useRef();
         },
         (error) => {
           toast.error("Error in submission");
+          toast.dismiss(spinToast);
           console.log(error);
         }
       );
@@ -120,7 +121,7 @@ const form = useRef();
           required
         />
         <input
-          type="text"
+          type="email"
           placeholder="Your email"
           name="from_email"
           id="emailArea"
