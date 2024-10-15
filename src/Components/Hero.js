@@ -68,6 +68,10 @@ or
          </p>
         </div>
         <div className="icons">
+ <Link to="https://dev-bootcamp.godspeed.systems/auth/linkedin">
+          <FaInstagram className="fa-brands"/>
+          </Link>
+
           <Link to="https://github.com/DharuvManchanda">
 <BsGithub className="fa-brands"/>
           </Link>
@@ -80,7 +84,6 @@ or
           </Link>
           <Link to="https://www.instagram.com/dharuv_manchanda003/">
           <FaInstagram className="fa-brands"/>
-
           </Link>
         </div>
       </div>
