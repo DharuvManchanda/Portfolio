@@ -1,11 +1,11 @@
-export const CardData = [{
-  heading: "Technologies used MERN",
-  id: 1,
-  img: require("./Images/Screenshot (311).png"),
-  pName: "Study Notion",
-  pLink: "https://study-notion-frontend-phi-mocha.vercel.app/",
-
-},
+export const CardData = [
+  {
+    heading: "Technologies used MERN",
+    id: 1,
+    img: require("./Images/Screenshot (311).png"),
+    pName: "Study Notion",
+    pLink: "https://study-notion-frontend-phi-mocha.vercel.app/",
+  },
   {
     heading: "Technologies Used Html Css JavaScript",
     id: 2,
@@ -13,14 +13,14 @@ export const CardData = [{
     pName: "Tic Tac Toe Game",
     pLink: "https://tic-tac-toe-gamexo.netlify.app",
   },
-   {
+  {
     id: 3,
     heading: "Technologies Used ReactJS Canva",
     img: require("./Images/ielts.png"),
     pName: "Institute Website",
     pLink: "https://dpd-ielts.vercel.app/",
   },
-{
+  {
     id: 4,
     heading: "Technologies Used Bootstrap JavaScript",
     img: require("./Images/textform.png"),
