@@ -1,7 +1,6 @@
 import React from 'react'
-import image from '../MyImages/whiteOutlineee.png'
+import image from '../../assets/profile.png'
 import { FaLink } from "react-icons/fa";
-import { Link } from 'react-router-dom'
 const Front = () => {
   return (
     <div className="Front">
@@ -11,14 +10,13 @@ const Front = () => {
             {/* <h2>Hey, I'm a Full Stack Web Developer</h2> */}
             <h2>Open for Job Opportunities</h2>
             <p>
-            Hello, I'm Dharuv Manchanda. I'm a full-stack developer with strong enthusiasm of learning & growing. I enjoy building sites & designs.
+            Hello, I'm Dharuv Manchanda. I'm a full-stack developer with 2+ years of production experience across Next.js and Node.js, comfortable owning a product from specification through production release.
             </p>
                 <p>
-                Expertise in JavaScript stack, including React.js for front-end development and Express.js for back-end, enabling seamless communication between client and server.                </p>
-                  {/* <p>Ability to create responsive web applications that adapt seamlessly to various devices and screen sizes, enhancing user experience across desktop, tablet, and mobile platforms.                </p> */}
-                  <Link to="https://drive.google.com/file/d/1psxto_ydQOnMJS8FuOSVETMzExkUscGh/view?usp=sharing" className='btn1'>Download Resume
+                Work across the stack: PostgreSQL/Prisma data models, contract-first OpenAPI endpoints, and production deployments on Vercel and a self-managed VPS (Nginx, PM2).</p>
+                  <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className='btn1'>View Resume
                 <FaLink/>
-                </Link>
+                </a>
               </div> 
         </div>
   )

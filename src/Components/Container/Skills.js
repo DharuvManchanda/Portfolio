@@ -1,8 +1,8 @@
 import React from 'react'
-const Skills = ({img,title}) => {
+const Skills = ({img,icon:Icon,color,title}) => {
   return (
       <div className="box">
-        <img src={img} alt="" />
+        {Icon ? <Icon style={color ? {color} : undefined} /> : <img src={img} alt={title} />}
         <h4>{title}</h4>
     </div>
   )

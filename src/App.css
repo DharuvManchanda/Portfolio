@@ -194,7 +194,7 @@ nav img {
           justify-content: center;
   -webkit-box-align: end;
       -ms-flex-align: end;
-          align-items: end;
+          align-items: flex-end;
   padding: 0px 20px 0 0px;
   gap: 20px;
 }
@@ -336,7 +336,7 @@ nav img {
   gap: 15px;
   -webkit-box-align: end;
       -ms-flex-align: end;
-          align-items: end;
+          align-items: flex-end;
 }
 .Front-Text {
   font-size: 26px;
@@ -405,6 +405,10 @@ nav img {
 }
 .box img {
   width: 80px;
+}
+.box svg {
+  width: 80px;
+  height: 80px;
 }
 .box:hover {
   scale: 1.06;

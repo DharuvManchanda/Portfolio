@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import VerticalTabs from "./Container/VerticalTabs";
 import Form from "./Container/Form";
 import Front from "./Container/Front";
@@ -11,7 +11,7 @@ const Container = () => {
   return (
     <div className="Container">
  <Front />
-      <h3 id="education">Education Journey</h3>
+      <h3 id="education">Experience & Education</h3>
       <VerticalTabs />
       <h3 id="skill">Skills </h3>
       <div className="Wrap">

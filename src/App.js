@@ -7,7 +7,6 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { HashLink as Link } from "react-router-hash-link";
 import { FaArrowUp } from "react-icons/fa";
-import Welcome from "./Components/Welcome"; // Import the Welcome component
 
 function App() {
   return (
@@ -15,7 +14,6 @@ function App() {
       <div className="wrapper">
         <Navbar />
         <Routes>
-          <Route path="/welcome" element={<Welcome />} />
           <Route
             path="/"
             element={

@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="footer">
-      <p> © 2023 Dharuv Manchanda. All rights reserved.</p>
-      <Link to="mailto:dharuvmanchanda@gmail.com">👋👋👋👋👋 </Link>
+      <p> © {new Date().getFullYear()} Dharuv Manchanda. All rights reserved.</p>
+      <Link to="mailto:dharuvmanchanda001@gmail.com">👋👋👋👋👋 </Link>
     </div>
   );
 };

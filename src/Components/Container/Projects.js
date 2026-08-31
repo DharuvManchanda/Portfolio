@@ -1,7 +1,6 @@
 import React from 'react'
 import { FaLink } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux'
 
 const Projects = ({pName,pLink,img,heading}) => {
   return (

@@ -1,15 +1,16 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
-import React, { useRef } from "react";
-import emailjs from "@emailjs/browser";
+import React from "react";
+
+const emptyForm = {
+  from_name: "",
+  from_email: "",
+  subject: "",
+  message: "",
+};
+
 export default function Form() {
-  
-  const [setForm, setFormData] = useState({
-    from_name: "",
-    from_email: "",
-    subject: "",
-    message: "",
-  });
+  const [formData, setFormData] = useState(emptyForm);
   const [message, setMessage] = useState(false);
 
   function changeHandle(event) {
@@ -20,41 +21,38 @@ export default function Form() {
       };
     });
   }
- 
 
-const form = useRef();
-    const sendEmail = (e) => {
-    const spinToast = toast.loading("Loading", { position: "top-center" });
+  const sendEmail = async (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm("service_13kdy6m", "template_pw8r8vq", form.current, {
-        publicKey: "KjQ-oC8LFvSz_wg_p",
-      })
-      .then(
-        () => {
-          setFormData({
-            from_name: "",
-            from_email: "",
-            subject: "",
-            message: "",
-          });
-          toast.success("Form Submitted",{ position: "top-center"    
-        });
-          setMessage(true);
-          toast.dismiss(spinToast);
-          setTimeout(() => {
-            setMessage(false);
-          }, 5000);
-        },
-        (error) => {
-          toast.error("Error in submission");
-          toast.dismiss(spinToast);
-          console.log(error);
-        }
-      );
+    const spinToast = toast.loading("Sending...", { position: "top-center" });
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        throw new Error(data.error || "Error in submission");
+      }
+      setFormData(emptyForm);
+      toast.success("Message sent!", { position: "top-center" });
+      setMessage(true);
+      setTimeout(() => {
+        setMessage(false);
+      }, 5000);
+    } catch (error) {
+      toast.error(error.message || "Error in submission", {
+        position: "top-center",
+      });
+      console.log(error);
+    } finally {
+      toast.dismiss(spinToast);
+    }
   };
+
   return (
-    <form ref={form} onSubmit={sendEmail}>
+    <form onSubmit={sendEmail}>
       <div className="inputName">
         <input
           type="text"
@@ -62,7 +60,7 @@ const form = useRef();
           name="from_name"
           id="nameArea"
           onChange={changeHandle}
-          value={setForm.from_name}
+          value={formData.from_name}
           required
         />
         <input
@@ -71,7 +69,7 @@ const form = useRef();
           name="from_email"
           id="emailArea"
           onChange={changeHandle}
-          value={setForm.from_email}
+          value={formData.from_email}
           required
         />
       </div>
@@ -82,7 +80,7 @@ const form = useRef();
           id="subject"
           placeholder="Your subject"
           onChange={changeHandle}
-          value={setForm.subject}
+          value={formData.subject}
           required
         />
       </div>
@@ -93,12 +91,12 @@ const form = useRef();
           rows={6}
           placeholder="Write your message"
           onChange={changeHandle}
-          value={setForm.message}
+          value={formData.message}
           required
         ></textarea>
       </div>
       <button className="subBtn cardBtn">
-        {message ? "Messsage Sent!" : "Send Message"}
+        {message ? "Message Sent!" : "Send Message"}
       </button>
     </form>
   );

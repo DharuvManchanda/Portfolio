@@ -47,36 +47,31 @@ console.log("Green.color",ColorObjectData.color);
 </div>
         <div className={open?"paraText open":"paraText close"}>
         <p>
-         I am a passionate full-stack web developer with a strong enthusiasm for learning and exploring new technologies. I have successfully crafted numerous projects that showcase my expertise in the field.
+         I like building things people actually use — and sticking around for the unglamorous parts: the edge cases, the production bugs, and the small details that make software feel solid.
         </p>
  
       <br />
       <p style={{letterSpacing:0.5,wordSpacing:"2px"}} >
-        I am excited to continue my journey, embracing new challenges and refining my abilities as I strive for excellence in the ever-evolving world of web development:
-
-        <span style={{color:"#ed8936",fontWeight:"700"}}> JavaScript, </span>
-        <span style={{color:"#f56565",fontWeight:"700"}}> MERN Stack, </span>
-and
-        <span style={{color:"#db4437",fontWeight:"700"}}> JAVA. </span> 
+        These days, most of what I build is written in
+        <span style={{color:"#ed8936",fontWeight:"700"}}> TypeScript, </span>
+runs on
+        <span style={{color:"#f56565",fontWeight:"700"}}> Next.js & Node.js, </span>
+and keeps its data in
+        <span style={{color:"#db4437",fontWeight:"700"}}> PostgreSQL. </span>
 </p>
 <br />
-        <p>Want to Connect? Schedule
-        <Link to='mailto:dharuvmanchanda@gmail.com' className="linkColor"> Email me </Link>
+        <p>Want to connect?
+        <Link to='mailto:dharuvmanchanda001@gmail.com' className="linkColor"> Email me </Link>
 or
-        <Link to='https://calendly.com/dharuvmanchanda001' className="linkColor"> Sign up </Link>
-        for Meeting.
+        <Link to='https://calendly.com/dharuvmanchanda001' className="linkColor"> book a meeting</Link>.
          </p>
         </div>
         <div className="icons">
- <Link to="https://dev-bootcamp.godspeed.systems/auth/linkedin">
-          <FaInstagram className="fa-brands"/>
-          </Link>
-
           <Link to="https://github.com/DharuvManchanda">
 <BsGithub className="fa-brands"/>
           </Link>
         
-          <Link to="https://www.linkedin.com/in/dharuv-manchanda-270326233/">
+          <Link to="https://linkedin.com/in/dharuvmanchanda">
           <FaLinkedin className="fa-brands"/>
           </Link>
           <Link to="https://twitter.com/manchanda00">
